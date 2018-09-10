@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style>
+ 
+.states {
+	fill: #e5e5e5;
+	stroke: #fff;
+	stroke-width:1px;
+}
+.cities {
+	fill: red;
+	opacity:0.7;
+}
+ 
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script>
+ 
+var width = 960,
+	height = 500;
+ 
+var svg = d3.select('body').append('svg')
+    .attr('width', width)
+    .attr('height', height);
+ 
+var projection = d3.geo.equirectangular()
+	.scale(1000)
+	.translate([width / 2, height / 2]);
+ 
+var path = d3.geo.path()
+	.projection(projection);
+	
+queue()
+	.defer(d3.json, 'Canada.topojson')
+	.await(makeMyMap);
+
+function makeMyMap(error, Canada) {
+    console.log(Canada)
+
+	svg.append('path')
+		.datum(topojson.feature(Canada, Canada.objects.collection))
+			.attr('d', path)
+			.attr('class', 'Canada');
+}
+</script>
+</body>
+</html>
