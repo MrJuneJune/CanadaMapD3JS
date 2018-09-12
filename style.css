@@ -1,0 +1,98 @@
+.provinces {
+    stroke: black;
+}
+
+.label {
+    fill: black;
+    font: 10px sans-serif;
+    text-anchor: middle;
+}
+
+.selected {
+    fill: lightcoral;
+}
+
+/*
+svg {
+    background: #efefef;
+}
+*/
+
+.centered {
+    top: 5%;
+    left: 25%;
+    position: absolute;
+}
+
+.showdata {
+    stroke: blueviolet;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2px;
+}
+
+/* Responsive Modal body*/
+.modal-body {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: auto;
+    max-height: 400px;
+    max-width: 600px;
+    padding: 15px;
+}
+
+/* Centering the column */
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+#info {
+    top: 10px;
+    left: 10px;
+}
+
+#title {
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+}
