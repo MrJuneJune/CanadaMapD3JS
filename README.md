@@ -14,4 +14,4 @@ Description:
 Created map of Canada using TopoJson file.
 When clicked on the province, modal with graph, which is created using data from a csv file that was generated from db using Panda library in Python.
 
-![Image of Yaktocat](https://imgur.com/FUkuiNL)
+![](https://imgur.com/FUkuiNL)
